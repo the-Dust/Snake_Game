@@ -1,5 +1,0 @@
-D:\PROJECTS\GIT\Snake_Game\Snake\Snake\bin\Debug\Snake.exe
-D:\PROJECTS\GIT\Snake_Game\Snake\Snake\bin\Debug\Snake.pdb
-D:\PROJECTS\GIT\Snake_Game\Snake\Snake\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\PROJECTS\GIT\Snake_Game\Snake\Snake\obj\x86\Debug\Snake.exe
-D:\PROJECTS\GIT\Snake_Game\Snake\Snake\obj\x86\Debug\Snake.pdb
