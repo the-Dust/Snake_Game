@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApplication1
+namespace Snake
 {
     class Program
     {
@@ -16,24 +16,10 @@ namespace ConsoleApplication1
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add(1);
-            numList.Add(2);
-            numList.Add(3);
-            int x = numList[0];
-
-            numList.RemoveAt(0);
-
-
-            foreach (int i in numList)
-            {
-                Console.Write(i);
-            }
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-
+            HorizontalLines line = new HorizontalLines(5,10,8,'+');
+            line.Draw();
+            VerticalLines yline = new VerticalLines(0, 4, 11, '#');
+            yline.Draw();
             Console.ReadKey();
         }
     }
