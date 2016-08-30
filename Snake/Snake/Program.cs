@@ -22,10 +22,10 @@ namespace Snake
             leftLine.Draw();
             rightLine.Draw();
 
-            //Отрисовка точек
+            //Отрисовка змеи
             Point p1 = new Point(4,5,'*');
-            p1.Draw();
-
+            Snake snake = new Snake(p1, 4, Direction.RIGHT);
+            snake.Draw();
             Console.ReadKey();
         }
     }
