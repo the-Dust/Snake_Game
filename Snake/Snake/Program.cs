@@ -25,7 +25,7 @@ namespace Snake
 
             //Отрисовка змеи
             Point p1 = new Point(4,5,'*');
-            Snake snake = new Snake(p1, 10, Direction.RIGHT);
+            Snake snake = new Snake(p1, 4, Direction.RIGHT);
             snake.Draw();
             
             
@@ -40,19 +40,19 @@ namespace Snake
                     food = foodcreator.CreateFood(snake.pList);
                     food.Draw();
                 }
-               /* else
+                else
                 {
                     Thread.Sleep(100);
                     snake.Move();
-                }*/
+                }
 
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.Handle(key.Key);
                 }
-                Thread.Sleep(50);
-                snake.Move();
+                Thread.Sleep(20);
+                
                 
 
             }

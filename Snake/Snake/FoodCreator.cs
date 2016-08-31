@@ -25,8 +25,10 @@ namespace Snake
         {
             Point p;
             Start:
+            
             int x = random.Next(2, mapWidth - 2);
             int y = random.Next(2, mapHeight - 2);
+          
             p = new Point(x, y, sym);
             //Проверяем, не совпадают ли координаты еды с координатами змейки (все равно не помогает)
             foreach (Point point in p2)

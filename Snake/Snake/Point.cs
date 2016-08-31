@@ -47,10 +47,13 @@ namespace Snake
             Console.Write(sym);
         }
         
-        public void Clear()
+        public void Clear(Point p)
         {
-            sym = ' ';
-            Draw();
+            if (p.sym != '$') //чтобы случайно не удалить еду
+            {
+                sym = ' ';
+                Draw();
+            }
         }
 
         public bool IsHit(Point p)
