@@ -7,7 +7,7 @@ namespace Snake
 {
     class Figure
     {
-        protected List<Point> pList = new List<Point>();
+        public List<Point> pList;
 
         public void Draw()
         {

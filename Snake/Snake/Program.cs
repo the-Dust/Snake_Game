@@ -25,13 +25,35 @@ namespace Snake
 
             //Отрисовка змеи
             Point p1 = new Point(4,5,'*');
-            Snake snake = new Snake(p1, 4, Direction.RIGHT);
+            Snake snake = new Snake(p1, 10, Direction.RIGHT);
             snake.Draw();
+            
+            
+            FoodCreator foodcreator = new FoodCreator(80,26,'$');
+            Point food = foodcreator.CreateFood(snake.pList);
+            food.Draw();
+            
             while (true)
             {
-                snake.Handle();
-                Thread.Sleep(100);
+                if (snake.Eat(food))
+                {
+                    food = foodcreator.CreateFood(snake.pList);
+                    food.Draw();
+                }
+               /* else
+                {
+                    Thread.Sleep(100);
+                    snake.Move();
+                }*/
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.Handle(key.Key);
+                }
+                Thread.Sleep(50);
                 snake.Move();
+                
             }
             
             
