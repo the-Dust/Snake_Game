@@ -8,6 +8,8 @@ namespace Snake
     class Snake : Figure
     {
         Direction direction;
+
+        int score = 0;
         
         public Snake(Point tail, int length, Direction _direction)
         {
@@ -60,10 +62,25 @@ namespace Snake
                 food.sym = head.sym;
                 food.Draw();
                 pList.Add(food);
+                Console.SetCursorPosition(0, 25);
+                score++;
+                Console.Write("Score = {0}", score);
                 return true;
             }
             else 
                 return false;
+        }
+
+        internal bool IsHitTail()
+        {
+            Point head = GetNextPoint();
+            foreach (var p in pList)
+            {
+                if (head.IsHit(p))
+                { return true; }
+
+            }
+            return false;
         }
     }
 }
